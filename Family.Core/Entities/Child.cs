@@ -8,18 +8,22 @@ using System.Threading.Tasks;
 
 namespace Family.Core.Entities
 {
-   public class Child
+    public class Child
     {
-       
+
         [Key]
         public int ChildId { get; set; }
         public string ChildName { get; set; }
         public int ChildAge { get; set; }
         public bool IsAlive { get; set; }
 
-        public int ManId { get; set; }
-        public int WomanId { get; set; }
-        public virtual Woman Mother { get; set; }
+
+        public int FatherId { get; set; }
+        [ForeignKey("FatherId")]
         public virtual Man Father { get; set; }
+
+        public int MotherId { get; set; }
+        [ForeignKey("MotherId")]
+        public virtual Woman Mother { get; set; }
     }
 }

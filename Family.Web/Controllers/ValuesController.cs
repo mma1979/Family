@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Family.Core.Entities;
+using Family.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,10 +11,37 @@ namespace Family.Web.Controllers
 {
     public class ValuesController : ApiController
     {
-        // GET api/values
-        public IEnumerable<string> Get()
+        IRepository _repo;
+        public ValuesController(IRepository repo)
         {
-            return new string[] { "value1", "value2" };
+            _repo = repo;
+        }
+        // GET api/values
+        public IEnumerable<object> Get()
+        {
+            return _repo.All<Man>().Select(m => new {
+                m.ManId,
+                m.ManName,
+                m.ManAge,
+                m.IsAlive,
+                Wifes = m.Wifes.Select(w => new
+                {
+                    w.WomanId,
+                    w.WomanName,
+                    w.WomanAge,
+                    w.IsAlive,
+                    w.HasbundId
+                }),
+                Children = m.Children.Select(c => new
+                {
+                    c.ChildId,
+                    c.ChildName,
+                    c.ChildAge,
+                    c.IsAlive,
+                    c.FatherId,
+                    c.MotherId
+                })
+            });
         }
 
         // GET api/values/5

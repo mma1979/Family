@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Family.Repositories", "Fami
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Family.Core", "Family.Core\Family.Core.csproj", "{A2848985-5C8F-4C12-A4FF-AD3B5A834A3D}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Family.Database", "Family.Database\Family.Database.sqlproj", "{44EA12EB-BB7C-439C-9C4D-FE7DF33C8D2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,12 @@ Global
 		{A2848985-5C8F-4C12-A4FF-AD3B5A834A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2848985-5C8F-4C12-A4FF-AD3B5A834A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2848985-5C8F-4C12-A4FF-AD3B5A834A3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44EA12EB-BB7C-439C-9C4D-FE7DF33C8D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44EA12EB-BB7C-439C-9C4D-FE7DF33C8D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44EA12EB-BB7C-439C-9C4D-FE7DF33C8D2E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{44EA12EB-BB7C-439C-9C4D-FE7DF33C8D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44EA12EB-BB7C-439C-9C4D-FE7DF33C8D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44EA12EB-BB7C-439C-9C4D-FE7DF33C8D2E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

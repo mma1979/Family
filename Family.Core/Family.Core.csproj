@@ -56,7 +56,9 @@
     <Compile Include="Entities\Child.cs" />
     <Compile Include="Entities\Man.cs" />
     <Compile Include="Entities\Woman.cs" />
+    <Compile Include="FamilyDbContext.cs" />
     <Compile Include="InjectableModule.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
